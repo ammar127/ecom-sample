@@ -1,10 +1,15 @@
 import React from 'react';
-
+import SearchIcon from './img/SearchIcon.png';
+import CartIcon from './img/CartIcon.png';
+import UserProfileIcon from  './img/UserProfileIcon.png';
 function Header() {
   return (
     <nav className="navbar navbar-expand-md py-4 fixed-top">
     <div className="container-fluid">
       <h3 className="d-inline align-middle text-white px-5">LOGO</h3>
+      <button className="navbar-toggler" data-target="#one" data-toggle="collapse">
+        <span className="navbar-toggler-icon"></span>
+      </button>
       <div className="collapse navbar-collapse" id="one">
         <ul className="navbar-nav">
           <li className="nav-item"><a className="nav-link text-white" href="#">HOME</a></li>
@@ -14,14 +19,12 @@ function Header() {
           <li className="nav-item"><a className="nav-link text-white" href="#">STORE OWNER</a></li>
         </ul>
       </div>
-      <button className="navbar-toggler" data-target="#one" data-toggle="collapse">
-        <span className="navbar-toggler-icon"></span>
-      </button>
+      
       <div className="collapse navbar-collapse" id="one">
-        <ul className="navbar-nav ml-auto">
-          <li className="nav-item"><a className="nav-link text-white" href="#"><i className="fa fa-search"></i></a></li>
-          <li className="nav-item"><a className="nav-link text-white" href="#"><i className="fa fa-shopping-cart"></i></a></li>
-          <li className="nav-item"><a className="nav-link text-white" href="#">Hi Mark <i className="fa fa-user"></i> </a></li>
+        <ul className="navbar-nav ml-auto pr-5">
+          <li className="nav-item"><a className="nav-link text-white" href="#"><img src={SearchIcon} height="20" alt=""/> </a></li>
+          <li className="nav-item"><a className="nav-link text-white" href="#"><img src={CartIcon} height="20" alt=""/></a></li>
+          <li className="nav-item"><a className="nav-link text-white" href="#">HI, MARK <img src={UserProfileIcon} height="20" alt=""/> </a></li>
         </ul>
       </div>
     </div>
